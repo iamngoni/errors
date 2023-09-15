@@ -1,12 +1,10 @@
-## Error Diary
-
-#### Error
+## Error
 
 ```bash
 Sandbox: rsync.samba(52049) deny(1) file-write-create Flutter
 ```
 
-#### Solution
+### Solution
 
 ```
 update your Xcode project build option 'ENABLE_USER_SCRIPT_SANDBOXING' to 'No'.
@@ -14,7 +12,9 @@ update your Xcode project build option 'ENABLE_USER_SCRIPT_SANDBOXING' to 'No'.
 
 ---
 
-#### Error
+## Error
+
+Related to `flutter_secure_storage` plugin when trying to read the encrypted data
 
 ```bash
 PlatformException(Exception encountered, read, javax.crypto.BadPaddingException: error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT
@@ -34,7 +34,7 @@ PlatformException(Exception encountered, read, javax.crypto.BadPaddingException:
 , null)
 ```
 
-#### Solution
+### Solution
 
 Add `allowBackup` and `fullBackupContent` on the application and set to `false`
 
